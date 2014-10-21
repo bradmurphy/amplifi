@@ -1,0 +1,124 @@
+#three {
+	overflow-y: auto;
+}
+
+.venue-box {
+	margin-top: 20px;
+	float: left;
+	height: auto;
+	@include span-columns(12);
+	@include row();
+	@include mq(nexus) {
+		width: 550px;
+		position: relative;
+		left: 50%;
+		margin-left: -275px;
+		padding: 0 15px;
+		clear: both;
+	}
+	@include mq(tablet) {
+		width: 700px;
+		position: relative;
+		left: 50%;
+		margin-left: -350px;
+		padding: 0 15px;
+		clear: both;
+	}
+	@include mq(desktop) {
+		@include span-columns(12);
+		left: 0;
+		margin-left: 0;
+		padding: 0;
+	}
+}
+
+.venue {
+	float: left;
+	@include span-columns(6);
+	padding: 0 15px;
+	margin: 10px 0;
+	cursor: pointer;
+	@include box-sizing(border-box);
+	.image {
+		float: left;
+		width: 100%;
+		height: 124px;
+		@include mq(nexus) {
+			height: 175px;
+		}
+		@include mq(tablet) {
+			height: 230px;
+		}
+		@include mq(desktop) {
+			height: 124px;
+		}
+	}
+	.progress {
+		margin-top: -23px;
+		font-family: $gothamBold;
+		float: left;
+		background: $navyBlue;
+		width: 100%;
+		color: $white;
+		text-transform: uppercase;
+		text-align: center;
+		height: 23px;
+	}
+	.title {
+		margin-top: 10px;
+		text-align: center;
+		color: $navyBlue;
+		font-style: italic;
+		text-transform: capitalize;
+	}
+}
+
+.row {
+	@include row();
+	@include mq(nexus) {
+		width: 550px;
+		position: relative;
+		left: 50%;
+		margin-left: -275px;
+		padding: 0 15px;
+		clear: both;
+	}
+	@include mq(tablet) {
+		width: 700px;
+		position: relative;
+		left: 50%;
+		margin-left: -350px;
+		padding: 0 15px;
+		clear: both;
+	}
+	@include mq(desktop) {
+		width: auto;
+		left: 0;
+		margin-left: 0;
+		padding: 0;
+	}
+}
+
+#venue1 {
+	background: url(../img/venues/barclays-center.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+#venue2 {
+	background: url(../img/venues/bowery-ballroom.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+#venue3 {
+	background: url(../img/venues/carnegie-hall.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}
+
+#venue4 {
+	background: url(../img/venues/radio-city.jpg) no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+}

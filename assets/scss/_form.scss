@@ -1,0 +1,139 @@
+// UP ARROW
+.arrow-up {
+	float: left;
+	position: relative;
+	opacity: 0;
+	left: 50%;
+	margin-left: -16px;
+	width: 0; 
+	height: 0; 
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 16px solid $navyBlue;
+}
+
+// POPUP
+.pop-up {
+	width: 100%;
+	position: absolute;
+	height: 75%;
+	z-index: 999;
+	top: calc(100% - 16px);
+	padding: 10px 0;
+	@include box-sizing(border-box);
+}
+
+// SOCIAL BUTTONS
+.social-wrap {
+	margin-left: calc(50% - 102px);
+	width: 204px;
+	margin-top: 25px;
+	margin-bottom: 20px;
+	@include mq(tablet) {
+		margin-left: calc(50% - 125px);
+		width: 250px;
+	}
+	img {
+		width: 65px;
+		cursor: pointer;
+		@include mq(tablet) {
+			width: 80px;
+		}
+	}
+}
+
+// WEBKIT AUTOFILL
+input:-webkit-autofill {
+	-webkit-box-shadow: 0 0 0px 1000px $navyBlue inset !important;
+	-webkit-text-fill-color: $white !important;
+}
+
+// CLOSE POPUP ARROWS
+#artistDown, #fanDown {
+	color: $cream;
+	position: absolute;
+	font-size: 1.5em;
+	left: 50%;
+	margin-top: -5px;
+	margin-left: -11px;
+	top: 0;
+	display: none;
+	cursor: pointer;
+}
+
+// FORM STYLES
+.form-container {
+	float: left;
+	background: $navyBlue;
+	@include span-columns(12);
+	height: 100%;
+	min-height: auto;
+	@include pad(10px 0);
+	@include box-sizing(border-box);
+	.content-wrap {
+		position: relative;
+		display: table;
+		form {
+			display: table-cell;
+			vertical-align: middle;
+			position: relative;
+			min-height: 240px;
+			width: 90%;
+			left: 5%;
+			@include mq(android) {
+				width: 400px;
+				left: calc(50% - 200px);
+			}
+			@include mq(desktop) {
+				width: 90%;
+				left: 5%;
+			}
+			label {
+				font-family: $gothamBook;
+				font-size: 1em;
+				color: $white;
+				font-weight: 200;
+				text-transform: uppercase;
+				margin-bottom: 0;
+				@include mq(tablet) {
+					margin-bottom: 0.375em;
+				}
+			}
+			input[type="text"], input[type="password"] {
+				border-radius: 0;
+				color: $white;
+				background: transparent;
+				border-left: none;
+				border-right: none;
+				border-top: none;
+				border-bottom: 1px solid $cream;
+				-webkit-appearance: none;
+				outline: none;
+				box-shadow: none;
+				@include pad(10px 0);
+				&:focus {
+					background: transparent;
+					box-shadow: none;
+				}
+			}
+		}
+	}
+}
+
+// REGISTER CONTAINER
+.register-pw {
+	@include span-columns(12);
+	text-align: left;
+	color: $white;
+	a {
+		margin: 0 5px;
+		text-transform: uppercase;
+		color: $cream;
+		font-size: .8em;
+		@include transition(all .3s ease-in-out);
+		&:hover {
+			color: $orange;
+			text-decoration: underline;
+		}
+	}
+}

@@ -1,0 +1,208 @@
+// IMPORT NORMALIZE AND ANIMATE
+@import "animate";
+@import "normalize";
+
+// IMPORT VARIABLES
+@import "variables";
+
+// IMPORT BOURBON
+@import "bourbon/bourbon";
+@import "bitters/base";
+@import "neat/neat";
+
+// TABLE OF CONTENTS
+
+// 1. GLOBAL STYLES
+// 2. IMPORTED STYLES
+// 3. TYPOGRAPHY
+// 4. FLASHES
+// 5. LISTS
+// 6. SIMPLIFIED GRID
+
+// GLOBAL STYLES
+body, html {
+	width: 100%;
+	height: 100%;
+	min-height: 480px;
+	background: $cream;
+	margin: 0;
+	padding: 0;
+}
+
+.content-wrap {
+	width: 100%;
+	height: 100%;
+	min-height: auto;
+	margin-left: auto;
+	margin-right: auto;
+	@include row();
+	@include pad(0 10px);
+	@include outer-container;
+	@include mq(iphone) {
+		max-width: 320px;
+	}
+	@include mq(android) {
+		max-width: 480px;
+	}
+	@include mq(tablet) {
+		max-width: 768px;
+	}
+	@include mq(laptop) {
+		max-width: 960px;
+	}
+	@include mq(desktop) {
+		max-width: 1280px;
+	}
+}
+
+.pager-holder {
+	width: 100%;
+	height: 20px;
+	background: $cream;
+	position: absolute;
+	height: 40px;
+	z-index: 99999;
+}
+
+.pager {
+	top: 10px;
+	position: relative;
+	left: 50%;
+	margin-left: -105px;
+	width: 210px;
+	height: 35px;
+	.circle {
+		float: left;
+		width: 15px;
+		height: 15px;
+		margin: 10px 10px;
+		border-radius: 50%;
+		background: $darkBlue;
+		display: block;
+	}
+	.orange {
+		background: $orange;
+	}
+}
+
+.overlay {
+	position: absolute;
+	background: $orange;
+	width: 100%;
+	height: 100%;
+	z-index: 999999;
+	img {
+		position: absolute;
+		top: 33%;
+		width: 90%;
+		margin-left: 5%;
+		opacity: 0;
+		@include mq(tablet) {
+			top: 30%;
+			width: 75%;
+			margin-left: 12.5%;
+		}
+	}
+}
+
+// PAGE WRAP
+.pages-wrap {
+	width: 100%;
+	height: 85%;
+	overflow-x: hidden;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq(desktop) {
+		max-width: 320px;
+		max-height: 480px;
+		overflow: hidden;
+	}
+	.page-holder {
+		background: $cream;
+		position: relative;
+		width: 1000%;
+		height: 100%;
+		.page {
+			position: relative;
+			float: left;
+			width: 10%;
+			height: 100%;
+		}
+	}
+}
+
+// NAV CONTAINER
+nav {
+	position: relative;
+	overflow: hidden;
+	background: $navyBlue;
+	@include span-columns(12);
+	height: 15.1%;
+	min-height: auto;
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+	@include mq(desktop) {
+		float: none;
+		max-width: 320px;
+		max-height: 85px;
+	}
+	#crazyButton {
+		display: table-cell;
+		vertical-align: middle;
+		margin-top: 20px;
+		background: transparent;
+		border: none;
+		color: $cream;
+		text-transform: uppercase;
+		font-family: $gothamBook;
+		font-size: 1.5em;
+		font-style: italic;
+		font-weight: 100;
+		text-align: center;
+		span {
+			font-size: .65em;
+		}
+	}
+}
+
+// IMPORTED STYLES
+@import "typography";
+@import "carousel";
+@import "login";
+@import "form";
+@import "artist";
+@import "venue";
+@import "petition";
+@import "share";
+
+section {
+	height: 100%;
+	min-height: auto;
+}
+
+// FLASHES
+.success {
+	@extend %flash-success;
+}
+
+.error {
+	@extend %flash-error;
+}
+
+.notice {
+	@extend %flash-notice;
+}
+
+.alert {
+	@extend %flash-alert;
+}
+
+// LISTS
+ol.default {
+	@extend %default-ol;
+}
+
+ul.default {
+	@extend %default-ul;
+}

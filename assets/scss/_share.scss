@@ -1,0 +1,33 @@
+.share {
+	margin-top: 80px;
+	@include mq(nexus) {
+		margin-top: 170px;
+	}
+	@include mq(tablet) {
+		margin-top: 220px;
+	}
+	@include mq(desktop) {
+		margin-top: 80px;
+	}
+	img {
+		display: block;
+		margin: 10px auto;
+		cursor: pointer;
+	}
+	div {
+		margin-top: 20px;
+		text-align: center;
+		.url	{
+			margin-top: 10px;
+			font-family: $gothamBold;
+			color: $navyBlue;
+			text-transform: uppercase;
+		}
+		.address {
+			margin-top: 10px;
+			font-family: $gothamBook;
+			color: $navyBlue;
+			text-transform: uppercase;
+		}
+	}
+}

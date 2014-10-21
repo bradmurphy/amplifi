@@ -1,0 +1,24 @@
+// BUTTONCONTAINER
+.button-container {
+	float: left;
+	position: relative;
+	overflow: hidden;
+	background: $navyBlue;
+	@include span-columns(12);
+	height: 20%;
+	min-height: auto;
+	input[type="submit"] {
+		margin-top: 20px;
+		@include span-columns(10);
+		@include shift(1);
+		background: transparent;
+		border: none;
+		color: $cream;
+		text-transform: uppercase;
+		font-family: $neutraBook !important;
+		font-size: 1.5em;
+		font-weight: 100;
+		-webkit-appearance: none;
+		outline: none;
+	}
+}

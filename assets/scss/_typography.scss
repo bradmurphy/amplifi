@@ -1,0 +1,62 @@
+h1 {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+	text-transform: uppercase;
+	cursor: pointer;
+	color: $navyBlue;
+	@include mq(android) {
+		font-size: 5em;
+	}
+	@include mq(tablet) {
+		font-size: 8em;
+	}
+	@include mq(desktop) {
+		font-size: 5em;
+	}
+}
+
+h2 {
+	color: $navyBlue;
+	margin-top: 75px;
+	font-size: 2.5em;
+	text-transform: uppercase;
+	text-align: center;
+}
+
+h3	{
+	font-size: .85em;
+	font-family: $gothamBook;
+	font-weight: 100;
+	text-align: center;
+	color: $navyBlue;
+	font-style: italic;
+	text-align: center;
+}
+
+.sig-h2 {
+	font-size: 2.5em;
+	@include mq(nexus) {
+		font-size: 4.5em;
+		margin-top: 0;
+	}
+	@include mq(tablet) {
+		margin-top: 0;
+	}
+	@include mq(desktop) {
+		font-size: 2.5em;
+	}
+}
+
+h5 {
+	display: none;
+	@include mq(desktop) {
+		margin-top: 20px;
+		display: block;
+		text-align: center;
+		font-size: .85em;
+		font-family: $gothamBook;
+		font-weight: 400;
+		color: $navyBlue;
+	}
+}

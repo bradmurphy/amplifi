@@ -1,0 +1,51 @@
+// ARROW ONE
+.arrow-one {
+	position: absolute;
+	left: 50%;
+	bottom: calc(50% + 3px);
+	margin-left: -16px;
+	width: 0; 
+	height: 0; 
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-bottom: 16px solid $navyBlue;
+}
+
+// ARROW TWO
+.arrow-two {
+	position: absolute;
+	left: 50%;
+	top: calc(50% + 1px);
+	margin-left: -16px;
+	width: 0; 
+	height: 0; 
+	border-left: 16px solid transparent;
+	border-right: 16px solid transparent;
+	border-top: 16px solid $navyBlue;
+}
+
+// OVERLAY STYLES
+#artistContainer {
+	float: left;
+	height: 50%;
+	display: table;
+}
+
+#fanContainer {
+	float: left;
+	height: 50%;
+	display: table;
+}
+
+.artist-fan {
+	// opacity: 0;
+	@include span-columns(12);
+	background: $cream;
+	@include box-sizing(border-box);
+	&:nth-child(2) {
+		border-bottom: 3px solid $navyBlue;
+	}
+	&:nth-child(3) {
+		border-top: 2px solid $navyBlue;
+	}
+}

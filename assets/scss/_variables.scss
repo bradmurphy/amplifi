@@ -1,0 +1,25 @@
+// MEDIA QUERY MIXIN
+@mixin mq($point) {
+	@if $point == desktop {
+		@media (min-width: 769px) { @content; }
+	}
+	@else if $point == tablet {
+		@media (min-width: 768px) { @content; }
+	}
+	@else if $point == nexus {
+		@media (min-width: 600px)  { @content; }
+	}
+	@else if $point == android {
+		@media (min-width: 480px)  { @content; }
+	}
+	@else if $point == iphone {
+		@media (min-width: 320px)  { @content; }
+	}
+}
+
+// COlORS
+$orange: #F99F1C;
+$navyBlue: #3c494f;
+$darkBlue: #262523;
+$cream: #EDF2EC;
+$white: #fff;

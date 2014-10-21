@@ -1,0 +1,139 @@
+#four {
+	overflow-y: auto;
+	padding-bottom: 20px;
+	@include box-sizing(border-box);
+}
+
+.pet-wrap {
+	margin-top: 20px;
+	height: 67px;
+	@include span-columns(12);
+	padding: 0 15px;
+	@include box-sizing(border-box);
+	@include mq(android) {
+		width: 350px;
+		position: relative;
+		left: 50%;
+		margin-left: -175px;
+		padding: 0 15px;
+		clear: both;
+	}
+	@include mq(nexus) {
+		width: 550px;
+		margin-left: -275px;
+	}
+	@include mq(tablet) {
+		width: 700px;
+		margin-left: -350px;
+	}
+	@include mq(desktop) {
+		margin-top: 20px;
+		height: 67px;
+		@include span-columns(12);
+		padding: 0 15px;
+		left: 0;
+		margin-left: 0;
+	}
+	.pet-circle	{
+		margin-top: 23px;
+		color: $white;
+		display: table;
+		text-align: center;
+		background: $navyBlue;
+		font-style: italic;
+		float: left;
+		width: 30px;
+		height: 30px;
+		border-radius: 50%;
+		span {
+			vertical-align: middle;
+			display: table-cell;
+		}
+	}
+	.pet-sig	{
+		float: right;
+		width: calc(100% - 60px);
+		height: calc(100% - 2px);
+		@include box-sizing(border-box);
+		img {
+			height: 60px;
+		}
+	}
+	.pet-line {
+		float: right;
+		background: $navyBlue;
+		border-radius: 10px;
+		width: calc(100% - 60px);
+		height: 2px;
+	}
+}
+
+.sig {
+	@include span-columns(10);
+}
+
+.landscape {
+	@include transform(rotate(90deg));
+	width: 320px;
+	position: relative;
+	left: 50%;
+	margin-left: -170px;
+	margin-top: 115px;
+	.pet-wrap {
+		margin-top: 35px;
+	}
+	@include mq(nexus) {
+		.pet-wrap {
+			margin-top: 120px;
+		}
+		width: 550px;
+		margin-top: 270px;
+		margin-left: -125px;
+	}
+	@include mq(tablet) {
+		width: 650px;
+		margin-left: -175px;
+		margin-top: 360px;
+	}
+	@include mq(desktop) {
+		width: 320px;
+		margin-left: -170px;
+		margin-top: 135px;
+		.pet-wrap {
+			margin-top: 35px;
+		}
+	}
+}
+
+#haas {
+	height: 200px;
+	margin-top: -40px;
+}
+
+.orange {
+	background: $orange !important; 
+}
+
+.sign-this {
+	cursor: pointer;
+}
+
+a.submit {
+	position: relative;
+	left: 85%;
+	top: -25px;
+	color: $white;
+	text-transform: uppercase;
+	padding: 5px 10px;
+	border-radius: 15px;
+	background: $navyBlue;
+	clear: both;
+	@include mq(nexus) {
+		left: 55%;
+		top: 160px;
+	}
+	@include mq(desktop) {
+		left: 85%;
+		top: -25px;
+	}
+}
